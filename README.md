@@ -16,7 +16,6 @@ Generate new project based on the template
 
     cargo generate tanelikaivola/rp2040_minimal_template
 
-
 ## Building and installing template
 
 ### Setup for building the firmware
