@@ -31,6 +31,10 @@ Then install [elf2uf2-rs](https://crates.io/crates/elf2uf2-rs) for automatic dep
 
 ### Build
 
+Got to your project folder (the name you gave in `cargo generate`)
+
+    cd [your project name]
+
 Connect pico into computer in bootmode and run `run` to build and deploy of the firmware
 
     cargo run --release
