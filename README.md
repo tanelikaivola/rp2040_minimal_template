@@ -15,3 +15,23 @@ First install [cargo-generate](https://crates.io/crates/cargo-generate)
 Generate new project based on the template
 
     cargo generate tanelikaivola/rp2040_minimal_template
+
+
+## Building and installing template
+
+### Setup for building the firmware
+
+If you have fresh installation of rust, you need to add architecture as a target
+
+    rustup target add thumbv6m-none-eabi
+
+Then install [elf2uf2-rs](https://crates.io/crates/elf2uf2-rs) for automatic deploy of the build firmware to pico
+    
+    cargo install elf2uf2-rs
+
+### Build
+
+Connect pico into computer in bootmode and run `run` to build and deploy of the firmware
+
+    cargo run --release
+
