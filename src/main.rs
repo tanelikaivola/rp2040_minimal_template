@@ -48,6 +48,5 @@ fn main() -> ! {
     loop {
         led.toggle().unwrap();
         delay.delay_ms(500);
-        panic!("haaaalp!");
     }
 }
