@@ -24,7 +24,7 @@
             "gdbTarget": ":3333",
             // If you have the Pico SDK installed, allows the
             // display of the RP2040 CPU registers in VS Code
-            "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd",
+            "svdFile": "${workspaceFolder}/rp2040.svd",
             "runToMain": true,
             "preLaunchCommands": [
                 "monitor init",
