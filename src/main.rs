@@ -2,7 +2,8 @@
 #![no_main]
 #![warn(clippy::all, clippy::pedantic, clippy::nursery)]
 
-use panic_halt as _;
+//use panic_halt as _;
+use panic_semihosting as _;
 
 mod bsp;
 use bsp::prelude::*;
@@ -10,6 +11,7 @@ use bsp::prelude::*;
 // Traits
 use embedded_hal::digital::v2::{OutputPin, ToggleableOutputPin}; // for pin.toggle()
 use hal::clocks::Clock; // for system_clock.freq()
+
 
 #[entry]
 fn main() -> ! {
@@ -46,5 +48,6 @@ fn main() -> ! {
     loop {
         led.toggle().unwrap();
         delay.delay_ms(500);
+        panic!("haaaalp!");
     }
 }
